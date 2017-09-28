@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="65878" started-at="2017-09-27T09:24:47Z" finished-at="2017-09-27T09:25:53Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="65878" started-at="2017-09-27T09:24:47Z" finished-at="2017-09-27T09:25:53Z">
+      <class name="plexus.reg.RegTest_11">
+        <test-method status="PASS" signature="LaunchBrowser()[pri:0, instance:plexus.reg.RegTest_11@523884b2]" name="LaunchBrowser" is-config="true" duration-ms="26481" started-at="2017-09-27T05:24:47Z" finished-at="2017-09-27T05:25:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchBrowser -->
+        <test-method status="PASS" signature="RegTest11()[pri:0, instance:plexus.reg.RegTest_11@523884b2]" name="RegTest11" duration-ms="39367" started-at="2017-09-27T05:25:13Z" finished-at="2017-09-27T05:25:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegTest11 -->
+      </class> <!-- plexus.reg.RegTest_11 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
