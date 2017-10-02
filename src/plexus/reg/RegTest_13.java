@@ -12,7 +12,7 @@ public class RegTest_13 extends PlexusSharedFunctions{
   public void RegTest13() throws InterruptedException {
 	  PlexusSharedFunctions.Login();
 	  PlexusSharedFunctions.ImplicitWait(30);
-	  PlexusSharedFunctions.CheckPromotionForm("TEST September23 Reg 13");
+	  PlexusSharedFunctions.CheckPromotionForm(Name);
 	  PlexusSharedFunctions.CheckPromoterInformation();
 	  AdvertisingMethods();
 	  EntrantGroups();
@@ -307,6 +307,7 @@ public class RegTest_13 extends PlexusSharedFunctions{
 	 driver.findElement(By.xpath("//*[@id='privacy-declarations']/div[1]/div/span[1]/div/input")).sendKeys("www.usertesting.com/privacy");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div[1]/div/div/section/form/footer/button[1]");
 	 PlexusSharedFunctions.ClickablebyXpath("//span[contains(text(),'Next step')]");
+	 PlexusSharedFunctions.ScrollDownintoView(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[3]/div[6]/button");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[3]/div[6]/button");
 	 PlexusSharedFunctions.ClickablebyXpath("html/body/div[3]/div/div[2]/div/div/span/div[2]/button[1]");
 	  Thread.sleep(2000);

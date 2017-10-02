@@ -3,6 +3,7 @@ package plexus.reg;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
@@ -11,7 +12,7 @@ public class RegTest_14 extends PlexusSharedFunctions{
   public void RegTest14() throws InterruptedException {
 	  PlexusSharedFunctions.Login();
 	  PlexusSharedFunctions.ImplicitWait(30);
-	  PlexusSharedFunctions.CheckPromotionForm("TEST September23 Reg 14");
+	  PlexusSharedFunctions.CheckPromotionForm(Name);
 	  PlexusSharedFunctions.CheckPromoterInformation();
 	  AdvertisingMethods();
 	  EntrantGroups();
@@ -89,6 +90,8 @@ public class RegTest_14 extends PlexusSharedFunctions{
 	  Select oSelect3 = new Select(driver.findElement(By.name("purchaseAlcohol")));
 	  oSelect3.selectByVisibleText("No, it does not involve the purchase of alcohol");
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='entry-step-form']/footer/button[2]");
+	  Thread.sleep(4000);
+	  PlexusSharedFunctions.ScrollDownintoView(".//*[@id='root']/div/div[2]/div[2]/div/div/div/button");
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/button");
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='entry-method-form']/main/div[4]/div[1]/div[2]/div/div/div/div/label/div/div[2]");
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='entry-method-form']/footer/button");
@@ -137,6 +140,8 @@ public class RegTest_14 extends PlexusSharedFunctions{
 	    PlexusSharedFunctions.ClickablebyXpath("html/body/div[3]/div/div[2]/div/div/div[3]/button[1]");
 	    PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[1]/div[2]/div/div[1]/div/div[2]/div/div[3]/span");
         PlexusSharedFunctions.verifyTextPresent("You have not linked a winning method to the entry method");
+        Thread.sleep(4000);
+        PlexusSharedFunctions.ScrollDownintoView(".//*[@id='winning-method-1']/div/div[1]/button");
 	    PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-1']/div/div[1]/button");
 	    PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-form']/main/div[7]/div[1]/div[1]/div/span[1]/select");
 	    PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-form']/main/div[7]/div[1]/div[2]/div/div/div/div/div/div/div/div/label/span[1]");
@@ -147,6 +152,8 @@ public class RegTest_14 extends PlexusSharedFunctions{
   
   public void HowtoAddPrize() throws InterruptedException
   {
+	  JavascriptExecutor jse = (JavascriptExecutor)driver;
+      jse.executeScript("scroll(0, -150);");
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-1']/div/div[2]/button");
 	  PlexusSharedFunctions.verifyTextPresent("Add Prize");
 	  driver.findElement(By.linkText("Skip")).click();
@@ -188,6 +195,8 @@ public class RegTest_14 extends PlexusSharedFunctions{
 	 driver.findElement(By.xpath("//*[@id='privacy-declarations']/div[1]/div/span[1]/div/input")).sendKeys("www.usertesting.com/privacy");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div[1]/div/div/section/form/footer/button[1]");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[1]/div[2]/div/div[1]/div/div[2]/div/div[3]/span");
+	 Thread.sleep(4000);
+	 PlexusSharedFunctions.ScrollDownintoView(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[3]/div[6]/button");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[3]/div[6]/button");
 	 PlexusSharedFunctions.ClickablebyXpath("html/body/div[3]/div/div[2]/div/div/span/div[2]/button[1]");
 	  Thread.sleep(2000);

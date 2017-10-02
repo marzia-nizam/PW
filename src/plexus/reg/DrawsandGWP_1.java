@@ -17,7 +17,7 @@ public class DrawsandGWP_1 extends PlexusSharedFunctions {
   public void DrawsandGWP1() throws InterruptedException {
 	  PlexusSharedFunctions.Login();
 	  PlexusSharedFunctions.ImplicitWait(30);
-	  PlexusSharedFunctions.CheckPromotionForm("TEST September23 Reg 1.1");
+	  PlexusSharedFunctions.CheckPromotionForm(Name);
 	  PlexusSharedFunctions.CheckPromoterInformation();
 	  AdvertisingMethods();
 	  EntrantGroups();
@@ -172,6 +172,7 @@ public class DrawsandGWP_1 extends PlexusSharedFunctions {
   
   public void HowtoAddPrize() throws InterruptedException
   {
+
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-1']/div/div[2]/button");
 	  PlexusSharedFunctions.verifyTextPresent("Add Prize");
 	  driver.findElement(By.linkText("Skip")).click();
@@ -199,6 +200,8 @@ public class DrawsandGWP_1 extends PlexusSharedFunctions {
 	  driver.findElement(By.name("voucherValidPeriod__startEvent")).sendKeys("28/05/18");
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='prize-item-form']/main/div[37]/fieldset/section/div[5]/div[2]/div[2]/div/div[1]/div[2]/div/div/div/div/label/div/div[2]");
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='prize-item-form']/footer/button[2]");
+	  Thread.sleep(4000);
+	  PlexusSharedFunctions.ScrollDownintoView(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div/button");
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div/button");
 	 
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-form']/main/div[4]/div[1]/div[3]/div/div/div/label/div[2]/span");
@@ -224,6 +227,8 @@ public class DrawsandGWP_1 extends PlexusSharedFunctions {
 	  driver.findElement(By.name("tickTimePeriod__startEvent")).sendKeys("01/05/18");
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='prize-item-form']/main/div[17]/fieldset/section/div[5]/div[2]/div[2]/div/div[1]/div[2]/div/div/div/div/label/div/div[2]");
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='prize-item-form']/footer/button[2]");
+	  Thread.sleep(4000);
+	  PlexusSharedFunctions.ScrollDownintoView(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div/button");
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div/button");
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-form']/main/div[5]/div[1]/div[1]/div/div/div/label/div[2]/span");
 	  driver.findElement(By.name("title")).clear();
@@ -271,14 +276,15 @@ public class DrawsandGWP_1 extends PlexusSharedFunctions {
   	 PlexusSharedFunctions.CheckInputProvided(".//*[@id='winning-method-3']/header/div[1]/h2", "Grand Prize Draw");
   	 PlexusSharedFunctions.CheckInputProvided(".//*[@id='winning-method-3']/div/div[2]/div[3]/section[2]/div[1]/section/div/div[2]", "chain");
   	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[1]/div[2]/div/div[1]/div/div[2]/div/div[3]/span");
-  }
+}
   
   public void NotificationandDelivery() 
   {
 	 PlexusSharedFunctions.verifyTextPresent("Notification and Delivery");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div[1]/div/div/section/form/main/div/div[1]/div[1]/div/div/div/div/label/div/div[2]");
-	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='notifications']/div/div[1]/div[1]/div/div[1]/div/div/div/label/div/div[2]");
-	 PlexusSharedFunctions.ClickablebyXpath("//*[@id='notifications']/div[2]/div[1]/div[2]/div/div/div/div/label/div/div[2]");
+	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='notifications']/div[1]/div[1]/div[1]/div/div[1]/div/div/div/label/div/div[2]");
+	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='notifications']/div[1]/div[1]/div[2]/div/div[1]/div/div/div/label/div/div[2]");
+	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='notifications']/div[2]/div[1]/div[2]/div/div/div/div/label/div/div[2]");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='publications']/div/div[1]/div[1]/div/div[1]/div/div/div/label/div/div[2]");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='publications']/div/div[1]/div[2]/div/div[1]/div/div/div/label/div/div[2]");
 	 driver.findElement(By.name("daysTilPublication")).clear();
@@ -327,6 +333,8 @@ public class DrawsandGWP_1 extends PlexusSharedFunctions {
 	 driver.findElement(By.xpath("//*[@id='privacy-declarations']/div[1]/div/span[1]/div/input")).sendKeys("www.usertesting.com/privacy");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div[1]/div/div/section/form/footer/button[1]");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[1]/div[2]/div/div[1]/div/div[2]/div/div[3]/span");
+	 Thread.sleep(4000);
+	 PlexusSharedFunctions.ScrollDownintoView(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[3]/div[6]/button");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[3]/div[6]/button");
 	 PlexusSharedFunctions.ClickablebyXpath("html/body/div[3]/div/div[2]/div/div/span/div[2]/button[1]");
 	

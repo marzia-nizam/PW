@@ -11,7 +11,7 @@ public class RegTest_11 extends PlexusSharedFunctions {
   public void RegTest11() throws InterruptedException {
 	  PlexusSharedFunctions.Login();
 	  PlexusSharedFunctions.ImplicitWait(30);
-	  PlexusSharedFunctions.CheckPromotionForm("TEST September23 Reg 11");
+	  PlexusSharedFunctions.CheckPromotionForm(Name);
 	  PlexusSharedFunctions.CheckPromoterInformation();
 	  AdvertisingMethods();
 	  EntrantGroups();
@@ -114,6 +114,7 @@ public class RegTest_11 extends PlexusSharedFunctions {
 	  PlexusSharedFunctions.ClickablebyXpath(".//*[@id='prize-item-form']/main/div[9]/span[3]/div/div[1]/div[2]/div/div/div/div/label/div/div[2]");
       driver.findElement(By.name("description")).sendKeys("Sticker");
       PlexusSharedFunctions.ClickablebyXpath(".//*[@id='prize-item-form']/footer/button[2]");
+      PlexusSharedFunctions.ScrollDownintoView(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[2]/button");
       PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[2]/button");
       PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-form']/main/div[4]/div[1]/div[3]/div/div/div/label/div[2]/span");
       PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-form']/main/div[7]/div[1]/div[1]/div/span[1]/select");
@@ -167,6 +168,7 @@ public class RegTest_11 extends PlexusSharedFunctions {
 	 driver.findElement(By.xpath("//*[@id='privacy-declarations']/div[1]/div/span[1]/div/input")).sendKeys("www.usertesting.com/privacy");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div[1]/div/div/section/form/footer/button[1]");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[1]/div[2]/div/div[1]/div/div[2]/div/div[3]/span");
+	 PlexusSharedFunctions.ScrollDownintoView(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[3]/div[6]/button");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[3]/div[6]/button");
 	 PlexusSharedFunctions.ClickablebyXpath("html/body/div[3]/div/div[2]/div/div/span/div[2]/button[1]");
 	  Thread.sleep(2000);

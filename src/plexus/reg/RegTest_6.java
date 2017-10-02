@@ -11,7 +11,7 @@ public class RegTest_6 extends PlexusSharedFunctions{
   public void RegTest6() throws InterruptedException {
 	  PlexusSharedFunctions.Login();
 	  PlexusSharedFunctions.ImplicitWait(30);
-	  PlexusSharedFunctions.CheckPromotionForm("TEST September23 Reg 6");
+	  PlexusSharedFunctions.CheckPromotionForm("TEST September29 Reg 6");
 	  PlexusSharedFunctions.CheckPromoterInformation();
 	  AdvertisingMethods();
 	  EntrantGroups();
@@ -132,6 +132,8 @@ public class RegTest_6 extends PlexusSharedFunctions{
      Select oSelect = new Select(driver.findElement(By.name("paymentMethod")));
 	 oSelect.selectByVisibleText("Cash");
      PlexusSharedFunctions.ClickablebyXpath(".//*[@id='prize-item-form']/footer/button[2]");
+     Thread.sleep(4000);
+	  PlexusSharedFunctions.ScrollDownintoView(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div/button");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[3]/button");
 	 PlexusSharedFunctions.verifyTextPresent("Add Winning Method");
      PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-form']/main/div[4]/div[1]/div[1]/div/div/div/label/div[2]/span");
@@ -169,6 +171,8 @@ public class RegTest_6 extends PlexusSharedFunctions{
  	     Select oSelect1 = new Select(driver.findElement(By.name("paymentMethod")));
  		 oSelect1.selectByVisibleText("Cash");
  	     PlexusSharedFunctions.ClickablebyXpath(".//*[@id='prize-item-form']/footer/button[2]");
+ 	    Thread.sleep(4000);
+ 		  PlexusSharedFunctions.ScrollDownintoView(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div/button");
  	     PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[2]/button");
  	    PlexusSharedFunctions.verifyTextPresent("Add Winning Method");
  	     PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-form']/main/div[5]/div[1]/div[1]/div/div/div/label/div[2]/span");
@@ -206,6 +210,8 @@ public class RegTest_6 extends PlexusSharedFunctions{
  	 	     Select oSelect2 = new Select(driver.findElement(By.name("paymentMethod")));
  	 		 oSelect2.selectByVisibleText("Cash");
  	 	     PlexusSharedFunctions.ClickablebyXpath(".//*[@id='prize-item-form']/footer/button[2]");
+ 	 	   Thread.sleep(4000);
+ 		  PlexusSharedFunctions.ScrollDownintoView(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div/button");
  	 	     PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[2]/button");
  	 	     PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-form']/main/div[6]/div[1]/div[1]/div/div/div/label/div[2]/span");
  	 	     driver.findElement(By.name("title")).clear();
@@ -325,6 +331,8 @@ public class RegTest_6 extends PlexusSharedFunctions{
 	 driver.findElement(By.xpath("//*[@id='privacy-declarations']/div[1]/div/span[1]/div/input")).sendKeys("www.usertesting.com/privacy");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div[1]/div/div/section/form/footer/button[1]");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[1]/div[2]/div/div[1]/div/div[2]/div/div[3]/span");
+	 Thread.sleep(4000);
+	 PlexusSharedFunctions.ScrollDownintoView(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[3]/div[6]/button");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[3]/div[6]/button");
 	 PlexusSharedFunctions.ClickablebyXpath("html/body/div[3]/div/div[2]/div/div/span/div[2]/button[1]");
 	  Thread.sleep(2000);

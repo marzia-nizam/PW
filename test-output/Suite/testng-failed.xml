@@ -3,18 +3,30 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="plexus.reg.RegTest_10">
+      <class name="plexus.reg.CreatePrefilledForm_2">
         <methods>
-          <include name="LaunchBrowser"/>
-          <include name="RegTest10"/>
-        </methods>
-      </class> <!-- plexus.reg.RegTest_10 -->
-      <class name="plexus.reg.RegTest_11">
-        <methods>
-          <include name="RegTest11"/>
+          <include name="CreatePreFilledForm"/>
           <include name="LaunchBrowser"/>
         </methods>
-      </class> <!-- plexus.reg.RegTest_11 -->
+      </class> <!-- plexus.reg.CreatePrefilledForm_2 -->
+      <class name="plexus.reg.CreatePreFilledForm_5">
+        <methods>
+          <include name="CreatePreFilledForm"/>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- plexus.reg.CreatePreFilledForm_5 -->
+      <class name="plexus.reg.DrawsandGWP_5">
+        <methods>
+          <include name="DrawsandGWP5"/>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- plexus.reg.DrawsandGWP_5 -->
+      <class name="plexus.reg.RegTest_15">
+        <methods>
+          <include name="RegTest15"/>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- plexus.reg.RegTest_15 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

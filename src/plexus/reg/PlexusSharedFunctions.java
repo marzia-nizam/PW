@@ -29,6 +29,7 @@ import org.testng.annotations.BeforeClass;
 public class PlexusSharedFunctions {
 	public static WebDriver driver=null;
     public static String PromotionName=null;
+    public static String Name = "TEST September29 Reg 15";
 	public static String start_date = "01/02/18";
 	public static String ActualText= null;
 	@BeforeClass(alwaysRun=true)
@@ -120,6 +121,12 @@ public class PlexusSharedFunctions {
 	public static void ClickablebyXpath(String xpath) {
 		driver.findElement(By.xpath(xpath)).click();
 		
+	}
+	
+	public static void ScrollDownintoView(String xpath)
+	{
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].scrollIntoView()", driver.findElement(By.xpath(xpath)));
 	}
 	
 	public static void verifyTextPresent(String value)

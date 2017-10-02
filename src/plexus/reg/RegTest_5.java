@@ -3,6 +3,7 @@ package plexus.reg;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
@@ -12,7 +13,7 @@ public class RegTest_5 extends PlexusSharedFunctions {
 	  
 	  PlexusSharedFunctions.Login();
 	  PlexusSharedFunctions.ImplicitWait(30);
-	  PlexusSharedFunctions.CheckPromotionForm("TEST September23 Reg 5.1");
+	  PlexusSharedFunctions.CheckPromotionForm(Name);
 	  PlexusSharedFunctions.CheckPromoterInformation();
 	  AdvertisingMethods();
 	  EntrantGroups();
@@ -342,9 +343,15 @@ public class RegTest_5 extends PlexusSharedFunctions {
       
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='prize-item-form']/footer/button[2]");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-1']/div/div[2]/div[3]/section[1]/div[1]/div/div/div[1]/div/span[1]/select");
+	 Thread.sleep(4000);
+	 JavascriptExecutor jse = (JavascriptExecutor)driver;
+	  jse.executeScript("arguments[0].scrollIntoView()", driver.findElement(By.linkText("Select all states")));
 	 driver.findElement(By.linkText("Select all states")).click();
-	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-1']/header/div[1]/h2");
+	// Thread.sleep(4000);
+	// jse.executeScript("arguments[0].scrollIntoView()", driver.findElement(By.xpath(".//*[@id='winning-method-1']/header/div[1]/h2")));
+	 PlexusSharedFunctions.ClickablebyXpath("//*[@id='root']/div/div[2]/div[1]/div[2]/div/div[1]/div/div[1]/div/h1");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[1]/div[2]/div/div[1]/div/div[2]/div/div[3]/span");
+	 jse.executeScript("scroll(0, -450);");
 	 driver.findElement(By.linkText("This field is required")).click();
 	 PlexusSharedFunctions.ClickablebyXpath("//*[@id='root']/div/div[2]/div[2]/div/div[1]/div/div/section/form/main/div/div[1]/div[1]/div/div/div/div/label/div/div[2]");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div[1]/div/div/section/form/footer/button");

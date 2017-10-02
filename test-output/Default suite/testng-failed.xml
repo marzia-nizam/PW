@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="plexus.reg.RegTest_13">
+      <class name="plexus.reg.CreatePrefilledForm_2">
         <methods>
-          <include name="RegTest13"/>
+          <include name="CreatePreFilledForm"/>
           <include name="LaunchBrowser"/>
         </methods>
-      </class> <!-- plexus.reg.RegTest_13 -->
+      </class> <!-- plexus.reg.CreatePrefilledForm_2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

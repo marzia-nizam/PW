@@ -3,6 +3,7 @@ package plexus.reg;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
@@ -11,7 +12,7 @@ public class RegTest_12 extends PlexusSharedFunctions{
   public void RegTest12() throws InterruptedException {
 	  PlexusSharedFunctions.Login();
 	  PlexusSharedFunctions.ImplicitWait(30);
-	  PlexusSharedFunctions.CheckPromotionForm("TEST September23 Reg 12");
+	  PlexusSharedFunctions.CheckPromotionForm(Name);
 	  PlexusSharedFunctions.CheckPromoterInformation();
 	  AdvertisingMethods();
 	  EntrantGroups();
@@ -129,10 +130,14 @@ public class RegTest_12 extends PlexusSharedFunctions{
   		PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-form']/footer/button");
         driver.findElement(By.xpath("//*[@id='prize-item-form']/main/div[8]/span[1]/div/div/span[1]/input")).sendKeys("2");
         PlexusSharedFunctions.ClickablebyXpath("//*[@id='prize-item-form']/footer/button[2]");
+        Thread.sleep(4000);
+        PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div");
         PlexusSharedFunctions.ClickablebyXpath("//h4[contains(text(),'Judging')]//following::div[@class='icon'][1]");
         PlexusSharedFunctions.ClickablebyXpath("html/body/div[3]/div/div[2]/div/div/div[3]/button[1]");
         
         PlexusSharedFunctions.verifyTextPresent("You have not linked a winning method to the entry method");
+        Thread.sleep(4000);
+        PlexusSharedFunctions.ScrollDownintoView(".//*[@id='winning-method-2']/div/div[1]/button");
         PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-2']/div/div[1]/button");
         PlexusSharedFunctions.ClickablebyXpath(".//*[@id='winning-method-form']/main/div[7]/div[1]/div[1]/div/span[1]/select");
         Thread.sleep(3000);
@@ -207,6 +212,8 @@ public class RegTest_12 extends PlexusSharedFunctions{
 	 driver.findElement(By.xpath("//*[@id='privacy-declarations']/div[1]/div/span[1]/div/input")).sendKeys("www.usertesting.com/privacy");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div[1]/div/div/section/form/footer/button[1]");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[1]/div[2]/div/div[1]/div/div[2]/div/div[3]/span");
+	 Thread.sleep(4000);
+	 PlexusSharedFunctions.ScrollDownintoView(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[3]/div[6]/button");
 	 PlexusSharedFunctions.ClickablebyXpath(".//*[@id='root']/div/div[2]/div[2]/div/div/div/div[3]/div[6]/button");
 	 PlexusSharedFunctions.ClickablebyXpath("html/body/div[3]/div/div[2]/div/div/span/div[2]/button[1]");
 	  Thread.sleep(2000);
